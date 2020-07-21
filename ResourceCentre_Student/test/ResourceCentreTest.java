@@ -73,9 +73,9 @@ public class ResourceCentreTest {
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
 		
 		//test if the list of camcorders retrieved from the SourceCentre is empty
-				String allCamcorder= ResourceCentre.retrieveAllCamcorder(camcorderList);
-				String testOutput = "";
-				assertEquals("Check that ViewAllCamcorderlist", testOutput, allCamcorder);
+		String allCamcorder= ResourceCentre.retrieveAllCamcorder(camcorderList);
+		String testOutput = "";
+		assertEquals("Check that ViewAllCamcorderlist", testOutput, allCamcorder);
 				
 		//Given an empty list, after adding 2 items, test if the size of the list is 2
 		ResourceCentre.addCamcorder(camcorderList, cc1);
@@ -95,25 +95,25 @@ public class ResourceCentreTest {
 	@Test
 	public void retrieveAllChromebookTest() {
 		// Test if Item list is not null but empty, so that can add a new item
-				assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
+		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 				
-				//test if the list of chromebooks retrieved from the SourceCentre is empty
-						String allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
-						String testOutput = "";
-						assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
-						
-				//Given an empty list, after adding 2 items, test if the size of the list is 2
-				ResourceCentre.addChromebook(chromebookList, cb1);
-				ResourceCentre.addChromebook(chromebookList, cb2);
-				assertEquals("Test if that Chromebook arraylist size is 2?", 2, chromebookList.size());
+		//test if the list of chromebooks retrieved from the SourceCentre is empty
+		String allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
+		String testOutput = "";
+		assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
 				
-				//test if the expected output string same as the list of chromebooks retrieved from the SourceCentre
-				allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
+		//Given an empty list, after adding 2 items, test if the size of the list is 2
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test if that Chromebook arraylist size is 2?", 2, chromebookList.size());
+				
+		//test if the expected output string same as the list of chromebooks retrieved from the SourceCentre
+		allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
 
-				testOutput = String.format("%-10s %-30s %-10s\n","CB0011", "My Google Chromebook 1st", "Mac OS");
-				testOutput += String.format("%-10s %-30s %-10s\n","CB0012", "SAMSUNG Chromebook 4+", "Win 10");
+		testOutput = String.format("%-10s %-30s %-10s\n","CB0011", "My Google Chromebook 1st", "Mac OS");
+		testOutput += String.format("%-10s %-30s %-10s\n","CB0012", "SAMSUNG Chromebook 4+", "Win 10");
 			
-				assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
+		assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
 				//testtest
 				//testing testing
 				//I am testing
@@ -151,7 +151,7 @@ public class ResourceCentreTest {
 		// write your code here
 		
 		//Test if the list is populated with both LOANED and not loaned items so that an item can be returned
-		assertNotNull("Test if list is populated", camcorderList);
+		assertNotNull("Test if list is available", camcorderList);
 		
 		
 		//Test if any LOANED item in the list can be returned
@@ -168,12 +168,15 @@ public class ResourceCentreTest {
 		// write your code here
 		
 		//Test if the list is populated with both LOANED and not loaned items so that an item can be returned
-		
+		assertNotNull("Test if list is available", chromebookList);
+				
+				
 		//Test if any LOANED item in the list can be returned
-		
-		//Test if any not loaned item in the list can not be returned
+		assertEquals("Test if the first item isn't available", false, chromebookList.get(0).getIsAvailable());
+		chromebookList.get(0).setIsAvailable(true);
 						
 		//Test if the ArrayList is updated to reflect the return
+		assertEquals("Test if in the ArrayList the first item has been returned", true, chromebookList.get(0).getIsAvailable());
 		
 	}
 	
