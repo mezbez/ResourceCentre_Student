@@ -108,6 +108,7 @@ public class ResourceCentreTest {
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertEquals("Test if that Chromebook arraylist size is 2?", 2, chromebookList.size());
 
+<<<<<<< HEAD
 		// test if the expected output string same as the list of chromebooks retrieved
 		// from the SourceCentre
 		allChromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
@@ -115,10 +116,18 @@ public class ResourceCentreTest {
 		testOutput = String.format("%-10s %-30s %-10s\n", "CB0011", "My Google Chromebook 1st", "Mac OS");
 		testOutput += String.format("%-10s %-30s %-10s\n", "CB0012", "SAMSUNG Chromebook 4+", "Win 10");
 
+=======
+		testOutput = String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0011", "My Google Chromebook 1st", "Yes", "", "Mac OS");
+		testOutput += String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0012", "SAMSUNG Chromebook 4+", "Yes", "", "Win 10");
+			
+>>>>>>> branch 'master' of https://github.com/mezbez/ResourceCentre_Student.git
 		assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
+<<<<<<< HEAD
 		// testtest
 		// testing testing
 		// I am testing
+=======
+>>>>>>> branch 'master' of https://github.com/mezbez/ResourceCentre_Student.git
 	}
 
 	@Test
@@ -154,15 +163,23 @@ public class ResourceCentreTest {
 		// write your code here
 
 		// Test if the list is populated so that an item can be loaned
-		assertNotNull("Test if list is available", chromebookList);
+		assertNotNull("Test if list is valid Chromebook arraylist to add to", chromebookList);
+		ResourceCentre.addChromebook(chromebookList, cb1);
 
 		// Test if an item in the list can be loaned
-		assertEquals("Test if the first item isn't available", true, chromebookList.get(0).getIsAvailable());
-		chromebookList.get(0).setIsAvailable(false);
+		Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020");
+		assertTrue("Test if an available item is ok to loan?", ok);
+
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020");
+		assertFalse("Test is tthe sam eitem is NOT ok to loan again?", ok);
 
 		// Test if the ArrayList is updated to reflect the loan
-		assertEquals("Test if in the ArrayList the first item has been loaned", false,
-				chromebookList.get(0).getIsAvailable());
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020");
+		assertFalse("Test that un-available item is NOT ok to loan?", ok);
+
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0013", "8-8-2020");
+		assertFalse("Test that non-esiting item is NOT ok to loan?", ok);
 
 	}
 
@@ -197,11 +214,19 @@ public class ResourceCentreTest {
 		// Test if any LOANED item in the list can be returned
 		assertEquals("Test if the first item isn't available", false, chromebookList.get(0).getIsAvailable());
 		chromebookList.get(0).setIsAvailable(true);
+<<<<<<< HEAD
 
 		// Test if the ArrayList is updated to reflect the return
 		assertEquals("Test if in the ArrayList the first item has been returned", true,
 				chromebookList.get(0).getIsAvailable());
 
+=======
+						
+		//Test if the ArrayList is updated to reflect the return
+		assertEquals("Test if in the ArrayList the first item has been returned", true, chromebookList.get(0).getIsAvailable());
+		//Placeholder message
+		
+>>>>>>> branch 'master' of https://github.com/mezbez/ResourceCentre_Student.git
 	}
 
 	@After
