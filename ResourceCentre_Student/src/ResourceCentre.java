@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import org.junit.Test;
+
 public class ResourceCentre {
 
 	public static void main(String[] args) {
@@ -134,6 +136,7 @@ public class ResourceCentre {
 					camcorderList.get(i).getDueDate(),camcorderList.get(i).getOpticalZoom());
 		}
 		return output;
+		
 	}
 	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.setHeader("CAMCORDER LIST");
@@ -153,7 +156,6 @@ public class ResourceCentre {
 		String output = retrieveAllChromebook(chromebookList);
 		System.out.println(output);
 	}
-
 	//================================= Option 2 Add =================================
 	public static Camcorder inputCamcorder() {
 		String tag = Helper.readString("Enter asset tag > ");
