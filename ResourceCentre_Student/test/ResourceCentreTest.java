@@ -141,7 +141,7 @@ public class ResourceCentreTest {
 		assertNotNull("Test if list is available", chromebookList);
 		
 		//Test if an item in the list can be loaned
-		assertEquals("Test if the first item isn't available", false, chromebookList.get(0).getIsAvailable());
+		assertEquals("Test if the first item isn't available", true, chromebookList.get(0).getIsAvailable());
 		chromebookList.get(0).setIsAvailable(false);
 		
 		//Test if the ArrayList is updated to reflect the loan
