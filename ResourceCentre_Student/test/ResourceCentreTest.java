@@ -124,12 +124,25 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
+		//Test if the list is populated so that an item can be loaned
+		
+		//Test if an item in the list can be loaned
+		
+		//Test if the ArrayList is updated to reflect the loan
+		
 	}
 	
 	@Test
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
+		//Test if the list is populated so that an item can be loaned
+		
+		//Test if an item in the list can be loaned
+				
+		//Test if the ArrayList is updated to reflect the loan
+				
 	}
 	
 	@Test
@@ -137,11 +150,25 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
+		//Test if the list is populated with LOANED items so that an item can be returned
+		
+		//Test if any LOANED item in the list can be returned
+				
+		//Test if the ArrayList is updated to reflect the return
+				
+		
 	}
 	@Test
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
+		//Test if the list is populated with LOANED items so that an item can be returned
+		
+		//Test if any LOANED item in the list can be returned
+						
+		//Test if the ArrayList is updated to reflect the return
+		
 	}
 	
 	@After
