@@ -163,7 +163,7 @@ public class ResourceCentre {
 		
 		ResourceCentre.setHeader("CHROMEBOOK LIST");
 		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
-				"AVAILABLE", "DUE DATE","OPERATINIG SYSTEM");
+				"AVAILABLE", "DUE DATE","OPERATING SYSTEM");
 		output += retrieveAllChromebook(chromebookList);
 		System.out.println(output);
 	}
