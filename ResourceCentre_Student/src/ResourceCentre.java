@@ -158,7 +158,7 @@ public class ResourceCentre {
 	public static Camcorder inputCamcorder() {
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
-		int zoom = Helper.readInt("Enter optical zoom > ");
+		int zoom = Helper.readInt("Enter the optical zoom > ");
 
 		Camcorder cc= new Camcorder(tag, description, zoom);
 		return cc;
