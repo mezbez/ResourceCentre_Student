@@ -123,10 +123,8 @@ public class ResourceCentreTest {
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		String allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
-		
+	
 		//Test if the list is populated so that an item can be loaned
-		
 		
 		//Test if an item in the list can be loaned
 		
@@ -153,13 +151,15 @@ public class ResourceCentreTest {
 		// write your code here
 		
 		//Test if the list is populated with both LOANED and not loaned items so that an item can be returned
+		assertNotNull("Test if list is populated", camcorderList);
+		
 		
 		//Test if any LOANED item in the list can be returned
-		
-		//Test if any not loaned item in the list can not be returned
+		assertEquals("Test if the first item isn't available", false, camcorderList.get(0).getIsAvailable());
+		camcorderList.get(0).setIsAvailable(true);
 				
 		//Test if the ArrayList is updated to reflect the return
-				
+		assertEquals("Test if in the ArrayList the first item has been returned", true, camcorderList.get(0).getIsAvailable());
 		
 	}
 	@Test
