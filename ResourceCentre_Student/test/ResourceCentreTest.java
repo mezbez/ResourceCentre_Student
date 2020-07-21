@@ -181,6 +181,7 @@ public class ResourceCentreTest {
 						
 		//Test if the ArrayList is updated to reflect the return
 		assertEquals("Test if in the ArrayList the first item has been returned", true, chromebookList.get(0).getIsAvailable());
+		//Placeholder message
 		
 	}
 	
