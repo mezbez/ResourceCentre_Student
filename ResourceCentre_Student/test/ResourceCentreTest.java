@@ -114,6 +114,8 @@ public class ResourceCentreTest {
 			
 				assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
 				//testtest
+				//testing testing
+				//I am testing
 	}
 
 	@Test
