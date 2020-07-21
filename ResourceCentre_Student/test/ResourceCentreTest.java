@@ -150,9 +150,11 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
-		//Test if the list is populated with LOANED items so that an item can be returned
+		//Test if the list is populated with both LOANED and not loaned items so that an item can be returned
 		
 		//Test if any LOANED item in the list can be returned
+		
+		//Test if any not loaned item in the list can not be returned
 				
 		//Test if the ArrayList is updated to reflect the return
 				
@@ -163,9 +165,11 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
-		//Test if the list is populated with LOANED items so that an item can be returned
+		//Test if the list is populated with both LOANED and not loaned items so that an item can be returned
 		
 		//Test if any LOANED item in the list can be returned
+		
+		//Test if any not loaned item in the list can not be returned
 						
 		//Test if the ArrayList is updated to reflect the return
 		
