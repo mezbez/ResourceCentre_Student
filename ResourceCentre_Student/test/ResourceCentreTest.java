@@ -123,8 +123,10 @@ public class ResourceCentreTest {
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		String allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
 		
 		//Test if the list is populated so that an item can be loaned
+		
 		
 		//Test if an item in the list can be loaned
 		
